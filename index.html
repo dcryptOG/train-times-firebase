@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Train Times</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<!-- Moment.js Reference -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+	<!-- Employee Tracker -->
+	<div class="flex-container" id="top">
+		<ul>
+			<li>
+				<h1 class="text-center"> Train Timetable </h1>
+			</li>
+			<li>
+				<p>Update train listing by the minute</p>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Current Train database list -->
+	<div class="flex-container" id="contentTable">
+		<table id="trainTable">
+			<tr>
+				<th> Train Name </th>
+				<th> Destination </th>
+				<th> Frequency </th>
+				<th> Next Arrival </th>
+				<th> Minutes Away </th>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Form to add new trains -->
+
+	<div class="flex-container" id="contentForm">
+
+
+		<form role="form">
+			<div class="form-group">
+				<label for="">Train Name</label>
+				<input type="text" class="form-control" id="trainNameInput" placeholder="Name your train!">
+			</div>
+			<div class="form-group">
+				<label for="">Destination</label>
+				<input type="text" id="destinationInput" placeholder="Where to bro?">
+			</div>
+			<div class="form-group">
+				<label for="">First Train Time (HH: Hour MM: Minutes - Military time)</label>
+				<input type="number" min="0000" max="2400" id="timeInput" placeholder="HHMM">
+			</div>
+			<div class="form-group">
+				<label for="">Frequency (min)</label>
+				<input type="number" min="0" id="frequencyInput" placeholder="">
+			</div>
+			<button type="submit" id="submitButton">Submit</button>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</html>
